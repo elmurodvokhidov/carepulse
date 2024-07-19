@@ -24,7 +24,7 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/adrianhajdin/healthcare.git
+   git clone https://github.com/elmurodvokhidov/carepulse.git
    ```
 2. Navigate to the project directory
    ```sh
