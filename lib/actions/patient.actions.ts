@@ -68,3 +68,17 @@ export async function registerPatient({ identificationDocument, ...patient }: Re
         console.log(error);
     }
 }
+
+export async function getPatient(userId: string) {
+    try {
+        const patients = await databases.listDocuments(
+            DATABASE_ID!,
+            PATIENT_COLLACTION_ID!,
+            [Query.equal('userId', userId)]
+        );
+
+        return parseStringify(patients.documents[0]);
+    } catch (error) {
+        console.log(error);
+    }
+}
