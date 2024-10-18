@@ -18,3 +18,17 @@ export async function createAppointment(appointment: CreateAppointmentParams) {
         console.log(error);
     }
 }
+
+export async function getAppointment(appointmentId: string) {
+    try {
+        const appointment = await databases.getDocument(
+            DATABASE_ID!,
+            APPOINTMENT_COLLACTION_ID!,
+            appointmentId,
+        );
+
+        return parseStringify(appointment);
+    } catch (error) {
+        console.log(error);
+    }
+}
