@@ -7,7 +7,6 @@ import { columns } from "@/components/table/columns";
 
 export default async function Admin() {
     const appointments = await getRecentAppointmentList();
-    console.log(appointments);
 
     return (
         <div className="mx-auto max-w-7xl flex flex-col space-y-14">
